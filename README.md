@@ -21,23 +21,23 @@ Image-Measurer is a Python application that allows you to measure distances in a
 
 You can install the necessary packages using pip:
 
-\`\`\`
+'''
 pip install opencv-python numpy tkinter PySimpleGUI
-\`\`\`
+'''
 
 Clone this repo to your local machine using:
 
-\`\`\`
+'''
 git clone https://github.com/ozgurural/image-measurer.git
-\`\`\`
+'''
 
 ## Usage
 
 After installation, you can run the program with:
 
-\`\`\`
+'''
 python image_measurer.py
-\`\`\`
+'''
 
 Once the application is running, follow the prompts in the application window. Select an image file and start measuring!
 
