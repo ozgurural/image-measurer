@@ -1,4 +1,4 @@
-# Image-Measurer
+# Image-Measurer: Interactive Distance Measurement on Images
 
 Image-Measurer is a Python application that allows you to measure distances in an image. The measurements are calculated in pixels and can be converted into real-world dimensions based on a reference distance provided by the user.
 
