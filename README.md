@@ -28,7 +28,7 @@ pip install opencv-python numpy tkinter PySimpleGUI
 Clone this repo to your local machine using:
 
 \`\`\`
-git clone https://github.com/your_username/image-measurer.git
+git clone https://github.com/ozgurural/image-measurer.git
 \`\`\`
 
 ## Usage
