@@ -76,20 +76,35 @@ while True:
 window.close()
 
 # loading the image
-img = cv2.imread(file_path)
-cv2.namedWindow('image', cv2.WINDOW_NORMAL)
-cv2.setMouseCallback('image', draw_circle)
+if 'file_path' in globals():
+    img = cv2.imread(file_path)
+    cv2.namedWindow('image', cv2.WINDOW_NORMAL)
+    cv2.setMouseCallback('image', draw_circle)
 
-while True:
-    cv2.imshow('image', img)
-    key = cv2.waitKey(1)
-    if key & 0xFF == ord('f'):  # 'f' for fullscreen
-        fullscreen = not fullscreen
-        if fullscreen:
-            cv2.setWindowProperty('image', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
-        else:
-            cv2.setWindowProperty('image', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_NORMAL)
-    elif key & 0xFF == 27:  # escape key
-        break
+    while True:
+        try:
+            # this will throw an error if the window is closed
+            prop = cv2.getWindowProperty('image', 0)
+            
+            # display the image in the window
+            cv2.imshow('image', img)
 
-cv2.destroyAllWindows()
+            # if the window is open, then prop should be >= 0
+            if prop < 0:
+                break
+
+            key = cv2.waitKey(1)
+            if key & 0xFF == ord('f'):  # 'f' for fullscreen
+                fullscreen = not fullscreen
+                if fullscreen:
+                    cv2.setWindowProperty('image', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+                else:
+                    cv2.setWindowProperty('image', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_NORMAL)
+            elif key & 0xFF == 27:  # escape key
+                break
+        except cv2.error:
+            break
+
+    cv2.destroyAllWindows()
+else:
+    print("No file was selected.")
