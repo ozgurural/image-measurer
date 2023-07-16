@@ -104,6 +104,8 @@ class MainWindow(QMainWindow):
         self.imageViewer = ImageWithMouseControl(self)
         self.setCentralWidget(self.imageViewer)
 
+        self.resize(800, 600)  # Set the initial size to 800x600
+
         menubar = self.menuBar()
         fileMenu = menubar.addMenu('File')
 
@@ -142,12 +144,12 @@ class MainWindow(QMainWindow):
         # Add this attribute
         self.aboutBrowser = QTextBrowser()
         self.aboutBrowser.setWindowTitle("About Image Measurer")
-        self.aboutBrowser.setText(
-            "This application is created by Ozgur Ural.\n\n"
-            "For more information, you can visit:"
+        self.aboutBrowser.setHtml(
+            "This application is created by Ozgur Ural.<br><br>"
+            "For more information, you can visit: "
             "<a href='https://ozgurural.github.io/'>https://ozgurural.github.io/</a>")
         self.aboutBrowser.setOpenExternalLinks(True)
-        self.aboutBrowser.resize(400, 200)  # You can adjust the size here
+        self.aboutBrowser.resize(400, 100)  # You can adjust the size here
 
     def showAboutInfo(self):
         self.aboutBrowser.show()
