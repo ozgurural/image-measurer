@@ -1,46 +1,57 @@
 # Image-Measurer: Interactive Distance Measurement on Images
 
-Image-Measurer is a Python application that allows you to measure distances in an image. The measurements are calculated in pixels and can be converted into real-world dimensions based on a reference distance provided by the user.
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-## Features
+Image-Measurer is a sophisticated Python application that enables users to interactively measure distances on an image. It uses the PyQt5 library to provide an intuitive and user-friendly interface for drawing lines and making measurements, with the option to save your work as an image file.
 
-- Interactive Measurements: Draw lines directly on the image to measure distances.
-- Real World Scaling: Provide a reference distance to calibrate measurements to real-world scales.
-- Multiple Distances: Measure multiple distances in a single image session.
-- Easy-to-Use Interface: Built with simplicity in mind.
+## Key Features
+
+- **Interactive Measurements:** Draw lines directly on the image to measure distances.
+- **Real-World Scaling:** Calibrate your measurements by providing a real-world reference distance.
+- **Zooming and Panning:** Use the mouse wheel to zoom in and out of the image, and the right mouse button to pan.
+- **Save Your Work:** Save your measurements as a PNG, JPEG, or other image format.
 
 ## Prerequisites
 
+To use Image-Measurer, you'll need the following:
+
 - Python 3.8 or later
-- OpenCV
+- PyQt5
 - numpy
-- tkinter
-- PySimpleGUI
 
 ## Installation
 
-You can install the necessary packages using pip:
+1. Install the necessary Python packages using pip:
 
-```bash
-pip install opencv-python numpy tkinter PySimpleGUI
-```
+    ```bash
+    pip install PyQt5 numpy
+    ```
 
-Clone this repo to your local machine using:
+2. Clone this repository to your local machine:
 
-```bash
-git clone https://github.com/ozgurural/image-measurer.git
-```
+    ```bash
+    git clone https://github.com/ozgurural/image-measurer.git
+    ```
 
 ## Usage
 
-After installation, you can run the program with:
+1. Navigate to the cloned repository:
 
-```bash
-python image_measurer.py
-```
+    ```bash
+    cd image-measurer
+    ```
 
-Once the application is running, follow the prompts in the application window. Select an image file and start measuring!
+2. Run the program:
+
+    ```bash
+    python image_measurer.py
+    ```
+
+Once the application is running, use the "File" menu to open an image. You can then click on the image to begin measuring distances.
 
 ## Contributing
 
 We welcome contributions! If you find a bug, have a feature request, or just want to improve Image-Measurer, feel free to open an issue or make a pull request.
+
+## License
+This project is licensed under the terms of the MIT license.
